@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events List</title>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 3rem;
+        background-color: rgba(192, 147, 58, 0.236);
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 1rem;
+        box-shadow: none;
+        border: 3px solid transparent; /* Transparent border initially */
+        transition: border 0.3s ease; /* Smooth transition for border */
+      }
+      .card:hover {
+        border-color: rgba(
+          192,
+          148,
+          58,
+          0.8
+        ); /* Change border color on hover */
+      }
+      h1 {
+        text-align: center;
+        color: black;
+        margin-bottom: 2rem;
+        background-color: rgba(192, 148, 58, 0.8);
+        padding: 1rem;
+      }
+      .btn-join,
+      .btn-register {
+        background-color: rgb(149, 113, 42);
+        color: white;
+        margin-top: 1rem;
+        padding-top: 10px;
+        border-radius: 9px;
+      }
+      .btn-join {
+        display: none;
+      }
+      .btn-join:active,
+      .btn-register:active {
+        background-color: rgb(149, 113, 42) !important;
+      }
+      .btn-join:hover,
+      .btn-register:hover {
+        background-color: rgba(149, 113, 42, 0.833);
+        color: #fff !important;
+      }
+      .btn-register {
+        width: 100%; /* Button width 100% of the card */
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .col-xl-4,
+      .col-lg-6 {
+        display: flex;
+      }
+      .fw-bold.mb-1 {
+        color: rgb(149, 113, 42);
+        font-size: 1.2rem;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+      .card-content {
+        flex-grow: 1;
+      }
+      .card-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar {
+        padding: 1rem;
+        box-shadow: none;
+      }
+      .navbar-brand img {
+        max-height: 50px; /* Adjust as needed */
+      }
+      .navbar-nav {
+        margin-left: auto; /* Pushes items to the right */
+      }
+      .navbar-nav .nav-link {
+        color: black;
+        font-size: 1rem;
+        margin-left: 1rem;
+        text-decoration: none;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light d-flex justify-content-between"
+    >
+      <a class="navbar-brand" href="#">
+        <img src="https://i.postimg.cc/xdTgGDw1/ccf-2024-logo.jpg" alt="Logo" />
+        <!-- Replace with your logo image path -->
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+
+    <h1>List of Events</h1>
+    <div class="row">
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Fin Talkshow</p>
+              <p class="text-muted mb-0">
+                Join the dynamic Fin Talkshow, where top social media finance
+                influencers share insider tips, market trends, and savvy
+                investment strategies to boost your financial knowledge and
+                success.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">
+                Financial Escape Room Challenge (FINSCAPE)
+              </p>
+              <p class="text-muted mb-0">
+                Dive into the Financial Escape Room Challenge, where
+                participants solve puzzles and navigate financial scenarios to
+                unlock the secrets of wealth management and financial freedom!
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Boardroom (Decision Taker)</p>
+              <p class="text-muted mb-0">
+                Enter the Boardroom, a decision-making game where players step
+                into the shoes of executives, tackling real-world business
+                challenges to steer their company to success.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Fin Auction</p>
+              <p class="text-muted mb-0">
+                The Fin Auction event combines a challenging quiz to test
+                financial knowledge with a strategic auction round to apply that
+                knowledge in a simulated market scenario, fostering both
+                analytical and decision-making skills.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">STANDUP COMEDY</p>
+              <p class="text-muted mb-0">
+                The Standup Comedy Night at FinCres24 Summit is designed to
+                provide a lighthearted and entertaining break from the intensive
+                financial discussions and activities. The comedy session aims to
+                bring humor and laughter to the participants, fostering a
+                relaxed and enjoyable atmosphere.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">FINANCIAL WORKSHOP</p>
+              <p class="text-muted mb-0">
+                The Financial Workshop at FinCres24 Summit is a comprehensive
+                educational session designed to enhance participants' financial
+                literacy and practical skills. Led by popular social media
+                influencers, the workshop will cover a range of topics,
+                providing valuable insights and hands-on experience in various
+                aspects of finance.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Case Study Competition</p>
+              <p class="text-muted mb-0">
+                The Case Study Competition at FinCres24 Summit is a prestigious
+                event designed to test and enhance the analytical and
+                problem-solving skills of participants in real-world financial
+                scenarios. This high-stakes competition offers substantial cash
+                prizes and is open to both financial and non-financial students,
+                fostering interdisciplinary collaboration and learning.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Fin Chess</p>
+              <p class="text-muted mb-0">
+                Fin Chess is a strategic chess tournament designed to combine
+                the intellectual rigor of chess with financial acumen.
+                Participants engage in intense matches where strategic thinking
+                and decision-making skills are put to the test in a competitive
+                setting.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Financial Art Exhibition</p>
+              <p class="text-muted mb-0">
+                The Financial Art Exhibition was a unique event that merged the
+                worlds of finance and art, showcasing creative expressions
+                inspired by financial themes and concepts. This event aimed to
+                bridge the gap between these seemingly disparate fields and
+                stimulate conversation about the intersection of finance and
+                artistic interpretation.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Marketing Strategy</p>
+              <p class="text-muted mb-0">
+                The Marketing Strategy Competition was an innovative event
+                designed to challenge participants' creativity and strategic
+                thinking in product advertising and manipulation. Participants
+                were tasked with selecting a product randomly, preparing a
+                marketing strategy within a short timeframe, and presenting
+                their ideas to a panel of judges.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Budget Challenge</p>
+              <p class="text-muted mb-0">
+                The “Budget Challenge” is an interactive game where participants
+                manage a six-month budget to achieve specific financial goals.
+                This report outlines the structure and content of Round 1,
+                including 20 multiple-choice questions (MCQs) divided into two
+                sections: basic MCQs and case-based MCQs.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">FinMini Hackathon</p>
+              <p class="text-muted mb-0">
+                The FinMini Hackathon is a rapid ideation and prototyping event
+                to promote creativity and innovation in financial technology.
+                Participants will compete in two rounds: an online brainstorming
+                session and an offline presentation.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">FINTECH TALKSHOW</p>
+              <p class="text-muted mb-0">
+                The FinTech Talkshow is an engaging and informative event
+                designed to explore the latest trends, innovations, and
+                challenges in the field of financial technology (FinTech).
+                Featuring industry experts, entrepreneurs, and thought leaders,
+                the talkshow provides valuable insights into how FinTech is
+                reshaping the financial landscape and impacting various sectors
+                globally.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">MASTERCLASS</p>
+              <p class="text-muted mb-0">
+                The Masterclass with Motivational Speakers is an inspiring and
+                educational session designed to empower attendees with practical
+                strategies, insights, and motivation for personal and
+                professional growth. Led by accomplished motivational speakers,
+                this event aims to ignite passion, enhance leadership skills,
+                and foster a mindset of success and resilience.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col-xl-4 col-lg-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="card-content">
+              <p class="fw-bold mb-1">Financial Modelling Challenge</p>
+              <p class="text-muted mb-0">
+                The Financial Modeling Challenge is a competitive event designed
+                to test participants' analytical and modeling skills in
+                financial scenarios. It offers an opportunity for individuals or
+                teams to showcase their proficiency in constructing financial
+                models, analyzing data, and making strategic decisions based on
+                financial insights.
+              </p>
+            </div>
+            <div class="card-buttons">
+              <button class="btn btn-sm btn-join">Join Now</button>
+              <button class="btn btn-register">Register</button>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.umd.min.js"
+    ></script>
+  </body>
+</html>
